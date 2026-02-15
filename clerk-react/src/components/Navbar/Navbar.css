@@ -1,0 +1,199 @@
+#navbar {
+    height: 5vw;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(245, 245 , 254, 0.4);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
+    z-index: 1000;
+    border: 1px solid #e5e7eb;
+}
+
+#navbarleft {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#navbarleft #navlogo {
+    height: 4.5vw;
+    width: auto;
+}
+
+#navbarright {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#navbarright a {
+    text-decoration: none;
+}
+
+#navdash {
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9vw;
+    font-weight: 600;
+    color: #374151;
+    background-color: #ffffff;
+    padding: 0.6vw 1.2vw;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    border: 1px solid #e5e7eb;
+    text-decoration: none;
+}
+
+#navdash:hover {
+    background-color: #f9fafb;
+    border-color: #d1d5db;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+#navdash:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    background-color: #f3f4f6;
+}
+
+#navdash i {
+    font-size: 1.2vw;
+    color: #374151;
+}
+
+#navprofile {
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9vw;
+    font-weight: 600;
+    color: #374151;
+    background-color: #ffffff;
+    padding: 0.6vw 1.2vw;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    border: 1px solid #e5e7eb;
+    text-decoration: none;
+}
+
+#navprofile:hover {
+    background-color: #f9fafb;
+    border-color: #d1d5db;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+#navprofile:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    background-color: #f3f4f6;
+}
+
+#navprofile i {
+    font-size: 1.2vw;
+    color: #374151;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    #navbar {
+        height: 60px;
+        padding: 0 16px;
+    }
+
+    #navbarleft #navlogo {
+        height: 45px;
+    }
+
+    #navbarright {
+        gap: 10px;
+    }
+
+    #navdash, #navprofile {
+        font-size: 13px;
+        padding: 8px 12px;
+        gap: 6px;
+        border-radius: 8px;
+    }
+
+    #navdash i, #navprofile i {
+        font-size: 16px;
+    }
+
+    /* Increase Clerk UserButton size on tablet */
+    #navbarright .cl-userButtonBox {
+        width: 38px !important;
+        height: 38px !important;
+    }
+
+    #navbarright .cl-avatarBox {
+        width: 38px !important;
+        height: 38px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #navbar {
+        height: 55px;
+        padding: 0 12px;
+    }
+
+    #navbarleft #navlogo {
+        height: 40px;
+    }
+
+    #navbarright {
+        gap: 8px;
+    }
+
+    #navdash, #navprofile {
+        font-size: 12px;
+        padding: 6px 10px;
+        gap: 5px;
+    }
+
+    #navdash i, #navprofile i {
+        font-size: 14px;
+    }
+
+    /* Increase Clerk UserButton size on mobile */
+    #navbarright .cl-userButtonBox {
+        width: 38px !important;
+        height: 38px !important;
+    }
+
+    #navbarright .cl-avatarBox {
+        width: 38px !important;
+        height: 38px !important;
+    }
+
+    #navbarright .cl-userButtonPopoverCard {
+        min-width: 280px !important;
+        min-height: auto !important;
+    }
+
+    #navbarright .cl-userButtonPopoverActionButton {
+        font-size: 14px !important;
+    }
+
+    #navbarright .cl-userPreviewMainIdentifier {
+        font-size: 16px !important;
+    }
+
+    #navbarright .cl-userPreviewSecondaryIdentifier {
+        font-size: 13px !important;
+    }
+}

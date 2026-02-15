@@ -1,0 +1,487 @@
+/* Add Member Modal Specific Styles */
+.add-member-modal {
+    width: 28vw;
+    min-width: 400px;
+    overscroll-behavior: contain;
+    touch-action: pan-y;
+    pointer-events: auto;
+}
+
+/* Ensure modal overlay prevents body scroll */
+.modal-overlay {
+    overscroll-behavior: contain;
+    touch-action: none;
+    pointer-events: auto;
+}
+
+/* Input Mode Toggle */
+.input-mode-toggle {
+    display: flex;
+    gap: 0.6vw;
+    margin-bottom: 1.2vw;
+    padding: 0.3vw;
+    background: #f3f4f6;
+    border-radius: 0.6vw;
+}
+
+.toggle-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4vw;
+    padding: 0.7vw 1vw;
+    font-size: 0.9vw;
+    font-family: 'A3', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    color: #6b7280;
+    border: none;
+    border-radius: 0.4vw;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+    background: rgba(45, 180, 125, 0.1);
+    color: #2db47d;
+}
+
+.toggle-btn.active {
+    background: #fff;
+    color: #2db47d;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    font-weight: 600;
+}
+
+.toggle-btn svg {
+    width: 0.95vw;
+    height: 0.95vw;
+}
+
+/* Form Group & Label */
+.form-group {
+    margin-bottom: 1vw;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9vw;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.6vw;
+    font-family: 'A3', sans-serif;
+}
+
+/* Email Input with Icon */
+.email-input-wrapper {
+    position: relative;
+    display: flex;   
+    align-items: center;
+}
+
+.email-input-wrapper input {
+    width: 100%;
+    padding: 0.9vw 1.2vw 0.9vw 3.5vw;
+    font-size: 0.9vw;
+    font-family: 'A3', sans-serif;
+    font-weight: 400;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.6vw;
+    color: #111827;
+    background: #fff;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.email-input-wrapper input:focus {
+    outline: none;
+    border-color: #2db47d;
+    box-shadow: 0 0 0 3px rgba(45, 180, 125, 0.1);
+}
+
+.email-input-wrapper input::placeholder {
+    color: #b0b5bd;
+    font-weight: 400;
+}
+
+.helper-text {
+    display: block;
+    font-size: 0.8vw;
+    color: #9ca3af;
+    margin-top: 0.5vw;
+}
+
+/* Current Members Section */
+.current-members-section {
+    margin-top: 1.5vw;
+}
+
+.current-members-section h3 {
+    font-size: 0.95vw;
+    font-weight: 600;
+    color: #374151;
+    margin: 0 0 1vw 0;
+}
+
+.members-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6vw;
+    max-height: 20vw;
+    overflow-y: auto;
+    padding-right: 0.3vw;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar for members list */
+.members-list::-webkit-scrollbar {
+    width: 0.4vw;
+}
+
+.members-list::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 0.3vw;
+}
+
+.members-list::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 0.3vw;
+}
+
+.members-list::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+.member-item {
+    display: flex;
+    align-items: center;
+    padding: 0.8vw 1vw;
+    background: #fafafa;
+    border-radius: 0.6vw;
+    border: 1px solid #f0f0f0;
+    transition: all 0.2s ease;
+}
+
+.member-item:hover {
+    background: #f5f5f5;
+    border-color: #e5e5e5;
+}
+
+/* Profile Image from Clerk */
+.member-profile-img {
+    width: 2.8vw;
+    height: 2.8vw;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1vw;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.member-avatar-large {
+    width: 2.8vw;
+    height: 2.8vw;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7c3aed, #6366f1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9vw;
+    font-weight: 600;
+    margin-right: 1vw;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.25);
+}
+
+.member-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 0.2vw;
+}
+
+.member-name {
+    font-size: 0.95vw;
+    font-weight: 600;
+    color: #111827;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.member-email {
+    font-size: 0.8vw;
+    color: #6b7280;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.member-phone {
+    font-size: 0.75vw;
+    color: #2db47d;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    gap: 0.3vw;
+}
+
+.member-phone::before {
+    content: "📱";
+    font-size: 0.7vw;
+}
+
+.member-badge {
+    background: #dcfce7;
+    color: #16a34a;
+    padding: 0.3vw 0.8vw;
+    border-radius: 1vw;
+    font-size: 0.75vw;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Add Member Submit Button */
+.add-member-submit {
+    background: #2db47d !important;
+    box-shadow: 0 4px 15px rgba(45, 180, 125, 0.3) !important;
+}
+
+.add-member-submit:hover {
+    background: #25a06e !important;
+    box-shadow: 0 6px 20px rgba(45, 180, 125, 0.4) !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .add-member-modal {
+        width: 90vw;
+        max-width: 500px;
+        min-width: auto;
+    }
+
+    .input-mode-toggle {
+        gap: 8px;
+        margin-bottom: 16px;
+        padding: 4px;
+        border-radius: 8px;
+    }
+
+    .toggle-btn {
+        gap: 6px;
+        padding: 10px 14px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+
+    .toggle-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .form-group {
+        margin-bottom: 14px;
+    }
+
+    .form-group label {
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .email-icon {
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+    }
+
+    .email-input-wrapper input {
+        padding: 13px 14px 13px 48px;
+        font-size: 15px;
+        font-weight: 400;
+        border-radius: 10px;
+        border: 2px solid #e5e7eb;
+    }
+
+    .email-input-wrapper input::placeholder {
+        color: #b0b5bd;
+        font-weight: 400;
+    }
+
+    .helper-text {
+        font-size: 13px;
+        margin-top: 6px;
+    }
+
+    .current-members-section {
+        margin-top: 16px;
+    }
+
+    .current-members-section h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .members-list {
+        gap: 10px;
+        max-height: 40vh;
+    }
+
+    .members-list::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .member-item {
+        padding: 12px 14px;
+        border-radius: 10px;
+    }
+
+    .member-profile-img,
+    .member-avatar-large {
+        width: 44px;
+        height: 44px;
+        margin-right: 12px;
+    }
+
+    .member-avatar-large {
+        font-size: 16px;
+    }
+
+    .member-info {
+        gap: 3px;
+    }
+
+    .member-name {
+        font-size: 15px;
+    }
+
+    .member-email {
+        font-size: 13px;
+    }
+
+    .member-phone {
+        font-size: 12px;
+        gap: 4px;
+    }
+
+    .member-phone::before {
+        font-size: 11px;
+    }
+
+    .member-badge {
+        padding: 6px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .add-member-modal {
+        width: 95vw;
+    }
+
+    .input-mode-toggle {
+        gap: 6px;
+        margin-bottom: 14px;
+        padding: 3px;
+    }
+
+    .toggle-btn {
+        gap: 5px;
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+
+    .toggle-btn svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 7px;
+    }
+
+    .email-icon {
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+    }
+
+    .email-input-wrapper input {
+        padding: 11px 12px 11px 44px;
+        font-size: 14px;
+        font-weight: 400;
+        border-radius: 8px;
+        border: 2px solid #e5e7eb;
+    }
+
+    .email-input-wrapper input::placeholder {
+        color: #b0b5bd;
+        font-weight: 400;
+    }
+
+    .helper-text {
+        font-size: 12px;
+    }
+
+    .current-members-section h3 {
+        font-size: 15px;
+    }
+
+    .members-list {
+        max-height: 35vh;
+    }
+
+    .member-item {
+        padding: 10px 12px;
+    }
+
+    .member-profile-img,
+    .member-avatar-large {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .member-avatar-large {
+        font-size: 15px;
+    }
+
+    .member-name {
+        font-size: 14px;
+    }
+
+    .member-email {
+        font-size: 12px;
+    }
+
+    .member-phone {
+        font-size: 11px;
+    }
+
+    .member-phone::before {
+        font-size: 10px;
+    }
+
+    .member-badge {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+}

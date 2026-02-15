@@ -1,0 +1,594 @@
+#all-balances {
+  padding: 7vw 4vw 3vw 4vw;
+  font-family: 'A3', sans-serif;
+  min-height: 130vh;
+  background: #f8fafc;
+}
+
+.page-header {
+  margin-bottom: 2vw;
+}
+
+.header-content h1 {
+  font-size: 2vw;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.header-content p {
+  font-size: 0.9vw;
+  color: #6b7280;
+  margin: 0.3vw 0 0 0;
+}
+
+.balances-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.balance-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 1vw;
+  padding: 1.2vw 1.8vw;
+  transition: all 0.2s ease;
+  flex-wrap: wrap;
+  gap: 1vw;
+}
+
+.balance-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.balance-avatars {
+  display: flex;
+  align-items: center;
+  gap: 0.4vw;
+  margin-right: 1.2vw;
+}
+
+.balance-avatars .avatar,
+.balance-avatars .avatar-img {
+  width: 2.5vw;
+  height: 2.5vw;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85vw;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.balance-avatars .avatar-img {
+  object-fit: cover;
+}
+
+.balance-avatars .from-avatar {
+  background: #dcfce7;
+  color: #16a34a;
+  border: 2px solid #bbf7d0;
+}
+
+.balance-avatars .to-avatar {
+  background: #e0e7ff;
+  color: #6366f1;
+  border: 2px solid #c7d2fe;
+}
+
+.balance-avatars .arrow {
+  font-size: 1vw;
+  color: #9ca3af;
+  margin: 0 0.2vw;
+}
+
+.balance-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.balance-title {
+  font-size: 1vw;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 0.2vw 0;
+}
+
+.balance-meta {
+  font-size: 0.8vw;
+  color: #6b7280;
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.3vw;
+}
+
+.balance-meta .creditor-name {
+  font-weight: 700;
+  color: #111827;
+}
+
+.balance-meta .separator {
+  color: #9ca3af;
+}
+
+.balance-meta .group-name {
+  color: #2db47d;
+  font-weight: 600;
+  font-size: 1vw;
+}
+
+.balance-right {
+  display: flex;
+  align-items: center;
+  gap: 1.2vw;
+  margin-left: 2vw;
+}
+
+.balance-amount {
+  font-size: 1.2vw;
+  font-weight: 700;
+  color: #ef4444;
+}
+
+.balance-buttons {
+  display: flex;
+  gap: 0.5vw;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.settle-btn-simple {
+  padding: 0.55vw 1vw;
+  background: #2db47d;
+  color: white;
+  border: none;
+  border-radius: 0.4vw;
+  font-family: 'A3', sans-serif;
+  font-size: 0.8vw;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.settle-btn-simple:hover {
+  background: #25a06e;
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(45, 180, 125, 0.3);
+}
+
+.settle-btn-simple:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pay-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4vw;
+  padding: 0.55vw 1vw;
+  border: none;
+  border-radius: 0.4vw;
+  font-family: 'A3', sans-serif;
+  font-size: 0.8vw;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.payment-icon {
+  width: 1.2vw;
+  height: 1.2vw;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.gpay-btn {
+  background: white;
+  color: #3c4043;
+  border: 1px solid #dadce0;
+  box-shadow: 0 1px 3px rgba(60, 64, 67, 0.3);
+}
+
+.gpay-btn:hover {
+  background: #f8f9fa;
+  box-shadow: 0 2px 6px rgba(60, 64, 67, 0.3);
+  transform: scale(1.05);
+}
+
+.gpay-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2vw;
+  height: 1.2vw;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4285f4 0%, #34a853 50%, #fbbc05 75%, #ea4335 100%);
+  color: white;
+  font-weight: 700;
+  font-size: 0.7vw;
+  font-family: 'Product Sans', 'Google Sans', Arial, sans-serif;
+}
+
+.phonepe-btn {
+  background: #5f259f;
+  color: white;
+}
+
+.phonepe-btn:hover {
+  background: #4d1e7f;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(95, 37, 159, 0.3);
+}
+
+.phonepe-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2vw;
+  height: 1.2vw;
+  border-radius: 50%;
+  background: white;
+  color: #5f259f;
+  font-weight: 900;
+  font-size: 0.8vw;
+}
+
+.pay-btn svg {
+  width: 0.9vw;
+  height: 0.9vw;
+}
+
+.settle-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.35vw;
+  padding: 0.55vw 1vw;
+  background: #2db47d;
+  color: white;
+  border: none;
+  border-radius: 0.4vw;
+  font-family: 'A3', sans-serif;
+  font-size: 0.8vw;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.settle-btn:hover {
+  background: #22a06b;
+  transform: scale(1.02);
+}
+
+.settle-btn svg {
+  width: 0.8vw;
+  height: 0.8vw;
+}
+
+/* Empty State */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5vw 2vw;
+  text-align: center;
+  background: white;
+  border: 2px dashed #e5e7eb;
+  border-radius: 1vw;
+}
+
+.empty-state svg {
+  width: 4vw;
+  height: 4vw;
+  color: #2db47d;
+  margin-bottom: 1vw;
+}
+
+.empty-state h3 {
+  font-size: 1.3vw;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 0.5vw 0;
+}
+
+.empty-state p {
+  font-size: 0.9vw;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #all-balances {
+    padding: 80px 16px 20px 16px;
+    min-height: 100vh;
+  }
+
+  .page-header {
+    margin-bottom: 20px;
+  }
+
+  .header-content h1 {
+    font-size: 28px;
+  }
+
+  .header-content p {
+    font-size: 14px;
+    margin-top: 4px;
+  }
+
+  .balances-container {
+    gap: 12px;
+  }
+
+  .balance-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    border-radius: 12px;
+    gap: 12px;
+  }
+
+  .balance-avatars {
+    gap: 8px;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .balance-avatars .avatar,
+  .balance-avatars .avatar-img {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .balance-avatars .arrow {
+    font-size: 18px;
+  }
+
+  .balance-info {
+    width: 100%;
+  }
+
+  .balance-title {
+    font-size: 16px;
+  }
+
+  .balance-meta {
+    font-size: 13px;
+  }
+
+  .balance-meta .group-name {
+    font-size: 14px;
+  }
+
+  .balance-right {
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 0;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .balance-amount {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .balance-buttons {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .settle-btn-simple {
+    padding: 10px 16px;
+    font-size: 13px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 70px;
+  }
+
+  .pay-btn {
+    padding: 10px 14px;
+    font-size: 12px;
+    border-radius: 8px;
+    flex: 1;
+    gap: 6px;
+    min-width: 90px;
+  }
+
+  .payment-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  .pay-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .gpay-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+  }
+
+  .phonepe-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+  }
+
+  .settle-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  .settle-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .empty-state {
+    padding: 60px 20px;
+  }
+
+  .empty-state svg {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 16px;
+  }
+
+  .empty-state h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .empty-state p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  #all-balances {
+    padding: 70px 12px 16px 12px;
+  }
+
+  .header-content h1 {
+    font-size: 24px;
+  }
+
+  .header-content p {
+    font-size: 13px;
+  }
+
+  .balance-card {
+    padding: 14px;
+  }
+
+  .balance-avatars .avatar,
+  .balance-avatars .avatar-img {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  .balance-title {
+    font-size: 15px;
+  }
+
+  .balance-meta {
+    font-size: 12px;
+  }
+
+  .balance-amount {
+    font-size: 18px;
+  }
+
+  .settle-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  #all-balances {
+    padding: 80px 16px 20px 16px;
+    min-height: 100vh;
+  }
+
+  .header-content h1 {
+    font-size: 32px;
+  }
+
+  .header-content p {
+    font-size: 14px;
+    margin-top: 4px;
+  }
+
+  .balances-container {
+    gap: 12px;
+  }
+
+  .balance-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    border-radius: 12px;
+    gap: 12px;
+  }
+
+  .balance-avatars {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .balance-avatar {
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+  }
+
+  .arrow-icon {
+    font-size: 20px;
+  }
+
+  .balance-info {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .balance-text {
+    font-size: 15px;
+  }
+
+  .owes-text,
+  .balance-amount {
+    font-size: 14px;
+  }
+
+  .balance-details {
+    font-size: 13px;
+  }
+
+  .settle-btn {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 15px;
+    justify-content: center;
+  }
+
+  .empty-state {
+    padding: 60px 20px;
+  }
+
+  .empty-state svg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .empty-state h3 {
+    font-size: 22px;
+  }
+
+  .empty-state p {
+    font-size: 14px;
+  }
+}

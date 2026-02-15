@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Mobile Viewport Fix */
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  
+  body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Override Clerk Development Mode Badge - Green Theme */
+.cl-internal-b3fm6y {
+  background: linear-gradient(135deg, #0d3320 0%, #14532d 100%) !important;
+  border: 1px solid #166534 !important;
+}
+
+.cl-internal-1dauvpw {
+  color: #22c55e !important;
+}
+
+/* General override for any Clerk dev badge */
+[data-localization-key="unstable__developmentMode"] {
+  color: #22c55e !important;
+}
+
+/* Override the striped background pattern */
+.cl-footer::after,
+.cl-footerAction::after {
+  background: none !important;
+}
+
+/* Fix for Lenis scroll hijacking modals */
+.modal-overlay,
+.modal-container {
+  pointer-events: auto;
+}
+
+.modal-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.modal-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.modal-container::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
